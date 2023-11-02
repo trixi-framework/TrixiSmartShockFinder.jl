@@ -1,0 +1,12 @@
+name = "TrixiSmartShockFinder"
+uuid = "6b42f25e-8cc0-41c2-936f-439385811e39"
+authors = ["Michael Schlottke-Lakemper <michael@sloede.com>"]
+version = "0.1.0"
+
+[deps]
+MuladdMacro = "46d2c3a1-f734-5fdb-9937-b9b9aeba4221"
+Trixi = "a7f1ee26-1774-49b1-8366-f1abc58fbfcb"
+
+[compat]
+MuladdMacro = "0.2.4"
+julia = "1.9"
