@@ -1,4 +1,6 @@
 # TrixiSmartShockFinder.jl
+[![Build Status](https://github.com/trixi-framework/TrixiSmartShockFinder.jl/workflows/CI/badge.svg)](https://github.com/trixi-framework/TrixiSmartShockFinder.jl/actions?query=workflow%3ACI)
+[![Coveralls](https://coveralls.io/repos/github/trixi-framework/TrixiSmartShockFinder.jl/badge.svg?branch=main)](https://coveralls.io/github/trixi-framework/TrixiSmartShockFinder.jl?branch=main)
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](https://opensource.org/licenses/MIT)
 
 Spin-off repository of [Trixi.jl](https://github.com/trixi-framework/Trixi.jl)
