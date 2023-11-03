@@ -10,6 +10,11 @@ using OrdinaryDiffEq
 using TrixiSmartShockFinder
 using Trixi
 
+# TODO: Remove once Trixi.jl is released without these exports
+NeuralNetworkPerssonPeraire = TrixiSmartShockFinder.NeuralNetworkPerssonPeraire
+NeuralNetworkRayHesthaven = TrixiSmartShockFinder.NeuralNetworkRayHesthaven
+IndicatorNeuralNetwork = TrixiSmartShockFinder.IndicatorNeuralNetwork
+
 # This elixir was one of the setups used in the following master thesis:
 # - Julia Odenthal (2021)
 #   Shock capturing with artificial neural networks

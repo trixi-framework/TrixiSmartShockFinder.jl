@@ -4,6 +4,11 @@ using Test
 using TrixiSmartShockFinder
 using Trixi
 
+# TODO: Remove once Trixi.jl is released without these exports
+NeuralNetworkPerssonPeraire = TrixiSmartShockFinder.NeuralNetworkPerssonPeraire
+NeuralNetworkRayHesthaven = TrixiSmartShockFinder.NeuralNetworkRayHesthaven
+IndicatorNeuralNetwork = TrixiSmartShockFinder.IndicatorNeuralNetwork
+
 # Load testing functions from Trixi.jl
 include(joinpath(pkgdir(TrixiSmartShockFinder.Trixi), "test", "test_trixi.jl"))
 
