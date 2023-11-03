@@ -9,7 +9,7 @@ model2d = load(network, @__MODULE__)[:model2d]
 
 using OrdinaryDiffEq
 using TrixiSmartShockFinder
-using TrixiSmartShockFinder.Trixi
+using Trixi
 
 # This elixir was one of the setups used in the following master thesis:
 # - Julia Odenthal (2021)

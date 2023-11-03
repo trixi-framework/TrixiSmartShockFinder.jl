@@ -8,7 +8,7 @@ model1d = load(network, @__MODULE__)[:model1d]
 
 using OrdinaryDiffEq
 using TrixiSmartShockFinder
-using TrixiSmartShockFinder.Trixi
+using Trixi
 
 # This elixir was one of the setups used in the following master thesis:
 # - Julia Odenthal (2021)

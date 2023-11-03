@@ -1,5 +1,6 @@
 [deps]
 BSON = "fbb218c0-5317-5bc6-957e-2ee96dd4b1f0"
+Downloads = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
 Flux = "587475ba-b771-5e3f-ad9e-33799f191a9c"
 OrdinaryDiffEq = "1dea7af3-3e70-54e6-95c3-0bf5283fa5ed"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"

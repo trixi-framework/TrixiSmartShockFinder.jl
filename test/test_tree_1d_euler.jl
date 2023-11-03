@@ -2,7 +2,7 @@ module TestExamples1DEuler
 
 using Test
 using TrixiSmartShockFinder
-using TrixiSmartShockFinder.Trixi
+using Trixi
 
 # Load testing functions from Trixi.jl
 include(joinpath(pkgdir(TrixiSmartShockFinder.Trixi), "test", "test_trixi.jl"))
