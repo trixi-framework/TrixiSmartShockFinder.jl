@@ -10,7 +10,8 @@ using Random: seed!
 seed!(0)
 
 using OrdinaryDiffEq
-using Trixi
+using TrixiSmartShockFinder
+using TrixiSmartShockFinder.Trixi
 
 # This elixir was one of the setups used in the following master thesis:
 # - Julia Odenthal (2021)

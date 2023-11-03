@@ -7,7 +7,8 @@ download("https://github.com/trixi-framework/Trixi_IndicatorNeuralNetwork_networ
 model1d = load(network, @__MODULE__)[:model1d]
 
 using OrdinaryDiffEq
-using Trixi
+using TrixiSmartShockFinder
+using TrixiSmartShockFinder.Trixi
 
 # This elixir was one of the setups used in the following master thesis:
 # - Julia Odenthal (2021)
