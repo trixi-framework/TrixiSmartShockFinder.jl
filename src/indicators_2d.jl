@@ -7,14 +7,14 @@
 
 # this method is used when the indicator is constructed as for shock-capturing volume integrals
 # empty cache is default
-function Trixi.create_cache(::Type{IndicatorNeuralNetwork},
-                            equations::AbstractEquations{2}, basis::LobattoLegendreBasis)
+function create_cache(::Type{IndicatorNeuralNetwork},
+                      equations::AbstractEquations{2}, basis::LobattoLegendreBasis)
     return NamedTuple()
 end
 
 # cache for NeuralNetworkPerssonPeraire-type indicator
-function Trixi.create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkPerssonPeraire}},
-                            equations::AbstractEquations{2}, basis::LobattoLegendreBasis)
+function create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkPerssonPeraire}},
+                      equations::AbstractEquations{2}, basis::LobattoLegendreBasis)
     alpha = Vector{real(basis)}()
     alpha_tmp = similar(alpha)
     A = Array{real(basis), ndims(equations)}
@@ -30,8 +30,8 @@ function Trixi.create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkPerssonPe
 end
 
 # cache for NeuralNetworkRayHesthaven-type indicator
-function Trixi.create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkRayHesthaven}},
-                            equations::AbstractEquations{2}, basis::LobattoLegendreBasis)
+function create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkRayHesthaven}},
+                      equations::AbstractEquations{2}, basis::LobattoLegendreBasis)
     alpha = Vector{real(basis)}()
     alpha_tmp = similar(alpha)
     A = Array{real(basis), ndims(equations)}
@@ -50,8 +50,8 @@ function Trixi.create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkRayHestha
 end
 
 # cache for NeuralNetworkCNN-type indicator
-function Trixi.create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkCNN}},
-                            equations::AbstractEquations{2}, basis::LobattoLegendreBasis)
+function create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkCNN}},
+                      equations::AbstractEquations{2}, basis::LobattoLegendreBasis)
     alpha = Vector{real(basis)}()
     alpha_tmp = similar(alpha)
     A = Array{real(basis), ndims(equations)}
@@ -69,8 +69,8 @@ function Trixi.create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkCNN}},
 end
 
 # this method is used when the indicator is constructed as for AMR
-function Trixi.create_cache(typ::Type{<:IndicatorNeuralNetwork},
-                            mesh, equations::AbstractEquations{2}, dg::DGSEM, cache)
+function create_cache(typ::Type{<:IndicatorNeuralNetwork},
+                      mesh, equations::AbstractEquations{2}, dg::DGSEM, cache)
     create_cache(typ, equations, dg.basis)
 end
 
