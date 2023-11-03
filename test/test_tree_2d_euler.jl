@@ -130,6 +130,6 @@ end
                         maxiters=30,
                         coverage_override=(maxiters = 2,))
 end
+end
 
 end # module
-

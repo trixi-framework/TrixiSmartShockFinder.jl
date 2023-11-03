@@ -222,5 +222,4 @@ function (indicator_ann::IndicatorNeuralNetwork{NeuralNetworkRayHesthaven})(u::A
 
     return alpha
 end
-
 end # @muladd

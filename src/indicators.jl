@@ -199,5 +199,4 @@ Indicator type for creating an `IndicatorNeuralNetwork` indicator.
 See also: [`IndicatorNeuralNetwork`](@ref)
 """
 struct NeuralNetworkCNN end
-
 end # @muladd
