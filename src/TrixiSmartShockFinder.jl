@@ -3,7 +3,7 @@ module TrixiSmartShockFinder
 using MuladdMacro: @muladd
 using Trixi
 using Trixi: AbstractIndicator, AbstractEquations, AbstractSemidiscretization, @threaded,
-             trixi_include
+             summary_box, trixi_include
 
 include("indicators.jl")
 include("indicators_1d.jl")

@@ -7,14 +7,14 @@
 
 # this method is used when the indicator is constructed as for shock-capturing volume integrals
 # empty cache is default
-function create_cache(::Type{<:IndicatorNeuralNetwork},
-                      equations::AbstractEquations{1}, basis::LobattoLegendreBasis)
+function Trixi.create_cache(::Type{<:IndicatorNeuralNetwork},
+                            equations::AbstractEquations{1}, basis::LobattoLegendreBasis)
     return NamedTuple()
 end
 
 # cache for NeuralNetworkPerssonPeraire-type indicator
-function create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkPerssonPeraire}},
-                      equations::AbstractEquations{1}, basis::LobattoLegendreBasis)
+function Trixi.create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkPerssonPeraire}},
+                            equations::AbstractEquations{1}, basis::LobattoLegendreBasis)
     alpha = Vector{real(basis)}()
     alpha_tmp = similar(alpha)
     A = Array{real(basis), ndims(equations)}
@@ -27,8 +27,8 @@ function create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkPerssonPeraire}
 end
 
 # cache for NeuralNetworkRayHesthaven-type indicator
-function create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkRayHesthaven}},
-                      equations::AbstractEquations{1}, basis::LobattoLegendreBasis)
+function Trixi.create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkRayHesthaven}},
+                            equations::AbstractEquations{1}, basis::LobattoLegendreBasis)
     alpha = Vector{real(basis)}()
     alpha_tmp = similar(alpha)
     A = Array{real(basis), ndims(equations)}
@@ -41,8 +41,8 @@ function create_cache(::Type{IndicatorNeuralNetwork{NeuralNetworkRayHesthaven}},
 end
 
 # this method is used when the indicator is constructed as for AMR
-function create_cache(typ::Type{<:IndicatorNeuralNetwork},
-                      mesh, equations::AbstractEquations{1}, dg::DGSEM, cache)
+function Trixi.create_cache(typ::Type{<:IndicatorNeuralNetwork},
+                            mesh, equations::AbstractEquations{1}, dg::DGSEM, cache)
     create_cache(typ, equations, dg.basis)
 end
 
