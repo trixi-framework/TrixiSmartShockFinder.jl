@@ -12,7 +12,15 @@ interested in using any of this, please get in touch with the developers of the
 
 
 ## Usage
-Clone this repository
+To run any of the elixirs with the neurl network-based indicators, you first need to install
+all required auxiliary packages by running the following code in the Julia REPL:
+```julia
+julia> using Pkg
+
+julia> Pkg.add(["BSON", "Flux", "OrdinaryDiffEq", "Trixi"])
+```
+
+Then, clone this repository
 ```shell
 git clone git@github.com:trixi-framework/TrixiSmartShockFinder.jl.git
 ```
